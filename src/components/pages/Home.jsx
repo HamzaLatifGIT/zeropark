@@ -23,10 +23,10 @@ function Home() {
       <HeroSection />
       <Brands />
       <SocialBrand />
-      <BrandsShowcase />
-      <TransparencyOfDemand />
-      <AffiliateNetworks />
       <CommerceMedia />
+      <TransparencyOfDemand />
+      <BrandsShowcase />
+      <AffiliateNetworks />
       <Testimonials />
       <SliderComponent />
       <ContactUs />
