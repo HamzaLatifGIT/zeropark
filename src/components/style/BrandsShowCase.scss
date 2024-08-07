@@ -1,0 +1,113 @@
+.brands-showcase {
+  text-align: center;
+  padding: 20px;
+
+  .brand-container {
+    margin: auto;
+
+    .brand-heading {
+      width: 100%;
+      text-align: left;
+
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.25;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-top: 2rem;
+      }
+    }
+
+    hr {
+      border: 1px solid rgba(230, 230, 230);
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .partners-section {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+
+
+
+      h3 {
+        text-align: left;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      .partners {
+        display: flex;
+        flex-wrap: wrap;
+
+        .partner {
+          margin: 10px;
+          padding: 20px 40px;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          background-color: rgba(250, 250, 250);
+          border-radius: 8px;
+          transition: transform 0.3s;
+
+          img {
+            max-width: 100px;
+            max-height: 50px;
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Media Queuries
+
+@media screen and (min-width:824px) {
+  .partners-section {
+    flex-wrap: wrap;
+
+    .partners {
+      justify-content: flex-end;
+      width: 65%;
+    }
+
+    h3 {
+      width: 35%;
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width:824px) {
+  .partners-section {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .partners {
+      justify-content: center;
+      width: 100%;
+    }
+
+    h3 {
+      width: 100%;
+    }
+
+  }
+
+
+}
