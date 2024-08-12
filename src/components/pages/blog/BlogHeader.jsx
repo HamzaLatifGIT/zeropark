@@ -14,7 +14,7 @@ function BlogHeader() {
         <div className="content">
           <h1>Welcome to Zeropark blog</h1>
           <p>Stay in the news with all things commerce media</p>
-          <div><Input placeholder='Search Articles ...'/></div>
+          <div><Input placeholder='Search Articles ...' /></div>
 
         </div>
         <div className="bg">

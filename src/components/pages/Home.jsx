@@ -14,13 +14,15 @@ import CommerceMedia from '../Growth'
 import Testimonials from '../Testimonials'
 import SliderComponent from '../BussinessBenifits'
 import SocialBrand from '../SocialBrand'
+import CustomSlider from '../CustomSlider'
+import videoBg from '../../assets/file.mp4';
 
 
 function Home() {
   return (
     <>
       
-      <HeroSection />
+      <HeroSection  url={videoBg} title={<h1>Drive incremental <br/>  performance <br/> to your brand</h1> } text={"🚀 Cookieless advertising solutions"}/>
       <Brands />
       <SocialBrand />
       <CommerceMedia />
@@ -28,6 +30,7 @@ function Home() {
       <BrandsShowcase />
       <AffiliateNetworks />
       <Testimonials />
+      <CustomSlider/>
       <SliderComponent />
       <ContactUs />
     

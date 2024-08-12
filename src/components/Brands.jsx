@@ -14,7 +14,7 @@ import './style/Brands.scss'
 
 function Brands() {
     return (
-        <div className="brand">
+        <div className="brand" data-sal="fade-in" data-sal-delay='200'>
             <div className='brand__container max-width'>
                 <div className="brand__logo"><img src={bass} alt="" /></div>
                 <div className="brand__logo"><img src={otto} alt="" /></div>

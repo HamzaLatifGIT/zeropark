@@ -3,7 +3,7 @@ import React from 'react';
 //Style
 import './style/BrandsShowCase.scss';
 
-// logo
+// Assets | logo |Icons
 
 import VivintLogo from '../assets/Brands-logo/vivint-logo.svg';
 import BassProShopsLogo from '../assets/Brands-logo/logo-bass.svg';
@@ -54,16 +54,16 @@ const BrandsShowcase = () => {
     <div className="brands-showcase">
       <div className="brand-container max-width">
         <div className="brand-heading">
-          <h2>Brands who trust <br /> us already</h2>
-          <p>See what brands trust our team to deliver beyond their expectations.</p>
+          <h2 data-sal='fade-up' data-sal-delay='100'>Brands who trust <br /> us already</h2>
+          <p data-sal='fade-up' data-sal-delay='300'>See what brands trust our team to deliver beyond their expectations.</p>
         </div>
         <hr />
 
         <div className="partners-section">
-          <h3>Demand partners</h3>
+          <h3 data-sal="fade-in" data-sal-delay='100'>Demand partners</h3>
           <div className="partners">
             {demandPartners.map((partner, index) => (
-              <div className="partner" key={index}>
+              <div className="partner" key={index} data-sal='slide-left' data-sal-delay='300'>
                 <img src={partner.logo} alt={partner.name} />
               </div>
             ))}
@@ -72,10 +72,10 @@ const BrandsShowcase = () => {
 
         <hr />
         <div className="partners-section">
-          <h3>Publishing partners</h3>
+          <h3 data-sal="fade-in" data-sal-delay='100'>Publishing partners</h3>
           <div className="partners">
             {publishingPartners.map((partner, index) => (
-              <div className="partner" key={index}>
+              <div className="partner" key={index} data-sal='slide-left' data-sal-delay='500'>
                 <img src={partner.logo} alt={partner.name} />
               </div>
             ))}

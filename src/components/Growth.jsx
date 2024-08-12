@@ -6,17 +6,26 @@ import './style/Growth.scss'
 
 const CommerceMedia = () => {
     const [activeTab, setActiveTab] = useState('Monetization');
+    const [countStarted, setCountStarted] = useState(true);
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
     };
 
+
+    const handleCountUpStart = () => {
+        if (!countStarted) {
+            setCountStarted(true);
+        }
+    };
+
+
     let content;
     if (activeTab === 'Monetization') {
         content = (
-            <div>
-                <p>Commerce Media is a source of steady monetization for our publishers that spreads over months and years.<br /> By joining Commerce Media ecosystem, media owners can improve their yield by prioritizing organic platform growth.</p>
-                <div className="statistics">
+            <div >
+                <p data-aos='fade-up' data-aos-delay='300' data-sal-fade>Commerce Media is a source of steady monetization for our publishers that spreads over months and years.<br /> By joining Commerce Media ecosystem, media owners can improve their yield by prioritizing organic platform growth.</p>
+                <div className="statistics" data-aos='fade-up' data-aos-delay='400'>
                     <div className="stat-item">
                         <p>+$1
                             <small>Million</small>
@@ -26,14 +35,14 @@ const CommerceMedia = () => {
                         <span>Advertiser Budgets Waiting to be Unlocked</span>
                     </div>
                     <div className="stat-item">
-                        <p>~<CountUp end={100} />%
+                        <p>~<CountUp end={100} enableScrollSpy={true} onStart={handleCountUpStart} start={countStarted ? null : 0} />%
 
                         </p>
                         <hr />
                         <span style={{ marginTop: '47px' }} >Sellout Rate</span>
                     </div>
                     <div className="stat-item">
-                        <p>+$<CountUp end={15} />
+                        <p>+$<CountUp end={15} enableScrollSpy={true} onStart={handleCountUpStart} start={countStarted ? null : 0} />
                             <small>Million</small> </p>
 
                         <hr />
@@ -44,11 +53,11 @@ const CommerceMedia = () => {
         );
     } else {
         content = (
-            <div>
-                <p>Zeropark Commerce Media's benefits for brand advertisers include secure supply distribution, transparent performance and optimization for long-tailed campaigns.<br /> The continuity and growth of our Publisher Portfolio allows all to scale performance in the long and short run.</p>
-                <div className="statistics">
+            <div >
+                <p data-sal='slide-up' data-aos='fade-up' data-aos-delay='300'>Zeropark Commerce Media's benefits for brand advertisers include secure supply distribution, transparent performance and optimization for long-tailed campaigns.<br /> The continuity and growth of our Publisher Portfolio allows all to scale performance in the long and short run.</p>
+                <div className="statistics" data-aos='fade-up' data-aos-delay='400'>
                     <div className="stat-item">
-                        <p>+<CountUp end={8} />%</p>
+                        <p>+<CountUp end={8} enableScrollSpy={true} onStart={handleCountUpStart} start={countStarted ? null : 0} />%</p>
                         <hr />
                         <span style={{ marginTop: '47px' }}>Average Conversion Rate</span>
                     </div>
@@ -72,8 +81,8 @@ const CommerceMedia = () => {
     return (
         <div className="commerce-media">
             <div className="commerce-container max-width">
-                <h1>A stable system for stable growth</h1>
-                <div className="tabs">
+                <h1 data-sal='slide-up'>A stable system for stable growth</h1>
+                <div className="tabs" data-aos='fade-up' >
                     <div className="horizontal-line"></div>
 
                     <button
@@ -92,7 +101,7 @@ const CommerceMedia = () => {
                     </button>
                 </div>
                 {content}
-                <button className="signup-button btn">Sign up</button>
+                <button className="signup-button btn" data-aos='fade-up' data-aos-delay='500'>Sign up</button>
             </div>
         </div>
     );

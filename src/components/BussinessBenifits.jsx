@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 //style
 import './style/BussinessBenifits.scss'
 
+//Assets | Logo | Icons
 import icon1 from '../assets/icons/ico-1.svg'
 import icon2 from '../assets/icons/ico-2.svg'
 import icon3 from '../assets/icons/ico-3.svg'
@@ -64,12 +65,14 @@ const SliderComponent = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
+
         responsive: [
             {
+
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
@@ -77,14 +80,15 @@ const SliderComponent = () => {
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
+
                 },
             },
             {
-                breakpoint: 480,
+                breakpoint: 560,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -96,24 +100,30 @@ const SliderComponent = () => {
     return (
         <div className="slider">
             <div className="slider__container max-width">
-                <h2>Partner with Zeropark and let your business benefit from</h2>
+                <h2 data-sal='slide-up' data-sal-delay='100'>Partner with Zeropark and let your business benefit from</h2>
                 <Slider {...settings}>
 
                     <Card
                         icon={<img src={icon1} />}
                         title="User Privacy"
                         description="We don't collect user data or use third-party cookie tracking."
+                        data-aos='fade-up'
+                        data-aos-delay='100'
                     />
 
                     <Card
                         icon={<img src={icon2} />}
                         title="Brand Safety"
                         description="Full control over audience interactions with your brand or platform."
+                        data-aos='fade-up'
+                        data-aos-delay='200'
                     />
                     <Card
                         icon={<img src={icon3} />}
                         title="Compliance Monitoring"
                         description="In-house team monitoring of supply quality and working with trusted partners."
+                        data-aos='fade-up'
+                        data-aos-delay='300'
                     />
                     <Card
                         icon={<img src={icon4} />}

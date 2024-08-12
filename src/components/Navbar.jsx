@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
 import { IoMdPerson } from "react-icons/io";
-import logo from "../assets/zeropark-logo-color-cm.svg";
-import "./style/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
+
+// Assets | Icons | Logo
+import logo from "../assets/zeropark-logo-color-cm.svg";
+
+//style
+import "./style/Navbar.scss";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +18,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar"
+      data-aos="slide-down"
+      data-sal-duration='6000'>
       <div className="navbar__container max-width">
         <div onClick={() => navigate("/")} className="navbar__logo">
           <img src={logo} alt="Zeropark Logo" />
@@ -29,12 +35,11 @@ const Navbar = () => {
         </button>
 
         <div
-          className={`navbar__links ${
-            isMenuOpen ? "navbar__links--open" : ""
-          }`}>
+          className={`navbar__links ${isMenuOpen ? "navbar__links--open" : ""
+            }`}>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="solution">
                 {" "}
                 <span>
                   Solutions <IoIosArrowDown />

@@ -30,12 +30,12 @@ const Testimonials = () => {
     return (
         <div className="testimonials">
             <div className="testimonials__container max-width">
-                <h2>Hear from our advertisers</h2>
+                <h2 data-sal='slide-up' data-sal-delay='100'>Hear from our advertisers</h2>
                 <div className="testimonials-list">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="testimonial-item">
+                        <div key={index} className="testimonial-item" >
                             <p className="quote">{testimonial.quote}</p>
-                            <div className="company">
+                            <div className="company" data-sal='slide-down' data-sal-delay='300'>
                                 <img src={testimonial.logo} alt={testimonial.company} className="company-logo" />
                                 <p>{testimonial.company}</p>
                             </div>

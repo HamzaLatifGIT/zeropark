@@ -3,9 +3,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap");
 
+
+
+
+
 * {
   padding: 0%;
   margin: 0%;
+  scroll-behavior: smooth;
+  animation: fade-in 0.15s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
 body {
@@ -22,6 +28,7 @@ body {
     justify-content: space-between;
   }
 }
+
 
 .max-width {
   padding-left: 16px;

@@ -4,19 +4,19 @@ import React from 'react';
 import './style/HeroSection.scss';
 
 //Assets | Icons
-import videoBg from '../assets/file.mp4';
 
-const HeroSection = () => {
+
+const HeroSection = ({title,text,url}) => {
     return (
         <section className="hero-section ">
             <video className="background-video" autoPlay muted>
-                <source src={videoBg} type="video/mp4" />
+                <source src={url} type="video/mp4" />
             </video>
-            <div className="hero-section__content max-width">
+            <div className="hero-section__content max-width" data-sal='fade-in'>
                 <div>
-                    <div><p>🚀 Cookieless advertising solutions</p></div>
+                    <div><p>{text}</p></div>
 
-                    <div>   <h1>Drive incremental <br />performance <br /> to your brand</h1></div>
+                    <div>{title}</div>
                     <div><button className="sign-up-btn">Sign up</button></div>
                 </div>
             </div>
