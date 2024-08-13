@@ -242,6 +242,7 @@ $font-color: #333;
 
   .swiper-pagination {
     position: absolute;
+    z-index: -1;
     bottom: 10px;
     width: 100%;
     display: flex;

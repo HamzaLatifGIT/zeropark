@@ -54,16 +54,16 @@ const BrandsShowcase = () => {
     <div className="brands-showcase">
       <div className="brand-container max-width">
         <div className="brand-heading">
-          <h2 data-sal='fade-up' data-sal-delay='100'>Brands who trust <br /> us already</h2>
-          <p data-sal='fade-up' data-sal-delay='300'>See what brands trust our team to deliver beyond their expectations.</p>
+          <h2 data-aos='fade-up' data-aos-delay='100'>Brands who trust <br /> us already</h2>
+          <p data-aos='fade-up' data-aos-delay='300'>See what brands trust our team to deliver beyond their expectations.</p>
         </div>
         <hr />
 
         <div className="partners-section">
-          <h3 data-sal="fade-in" data-sal-delay='100'>Demand partners</h3>
+          <h3 data-aos="fade-in" data-aos-delay='100'>Demand partners</h3>
           <div className="partners">
             {demandPartners.map((partner, index) => (
-              <div className="partner" key={index} data-sal='slide-left' data-sal-delay='300'>
+              <div className="partner" key={index} data-aos='fade-right' data-aos-delay='300'>
                 <img src={partner.logo} alt={partner.name} />
               </div>
             ))}
@@ -72,11 +72,11 @@ const BrandsShowcase = () => {
 
         <hr />
         <div className="partners-section">
-          <h3 data-sal="fade-in" data-sal-delay='100'>Publishing partners</h3>
+          <h3 data-aos="fade-in" data-aos-delay='100'>Publishing partners</h3>
           <div className="partners">
             {publishingPartners.map((partner, index) => (
-              <div className="partner" key={index} data-sal='slide-left' data-sal-delay='500'>
-                <img src={partner.logo} alt={partner.name} />
+              <div className="partner" key={index} data-aos='fade-right' data-aos-delay='500'>
+                <img src={partner.logo} alt={partner.name}  />
               </div>
             ))}
           </div>

@@ -12,8 +12,8 @@ const HeroSection = ({title,text,url}) => {
             <video className="background-video" autoPlay muted>
                 <source src={url} type="video/mp4" />
             </video>
-            <div className="hero-section__content max-width" data-sal='fade-in'>
-                <div>
+            <div className="hero-section__content max-width" >
+                <div data-aos='fade-in' data-aos-delay='50'>
                     <div><p>{text}</p></div>
 
                     <div>{title}</div>

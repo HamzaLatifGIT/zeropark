@@ -14,7 +14,7 @@ import '../../style/Brands.scss'
 
 function Brands() {
     return (
-        <div className="brand" data-sal="fade-in" data-sal-delay='100'>
+        <div className="brand" data-aos="fade-in" data-aos-delay='100'>
             <div className='brand__container max-width'>
                 <div className="brand__logo"><img src={nike} alt="" /></div>
                 <div className="brand__logo"><img src={wayfair} alt="" /></div>

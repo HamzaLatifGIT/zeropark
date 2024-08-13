@@ -12,7 +12,7 @@ const AdvertisingSolution = () => {
       <div className="transparency-container max-width">
 
 
-        <div className="content" style={{ paddingLeft: 'unset' }} data-sal='slide-right'>
+        <div className="content" style={{ paddingLeft: 'unset' }} data-aos='slide-right'>
 
           <h2>Discover incremental advertising solutions.</h2>
           <p>
@@ -24,7 +24,7 @@ const AdvertisingSolution = () => {
           <button>Contact us</button>
 
         </div>
-        <div className="image-container" style={{ gridRowStart: 'unset !important', gridColumnStart: '7' }} data-sal='slide-left'>
+        <div className="image-container" style={{ gridRowStart: 'unset !important', gridColumnStart: '7' }} data-aos='slide-left'>
           <img src={discover} alt="Transparency" />
         </div>
 

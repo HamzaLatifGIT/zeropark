@@ -13,24 +13,21 @@ import VerticalSlider from "./components/pages/Brand and Agencies/VerticalSlider
 // Reveal Animations
 import Aos from "aos";
 import 'aos/dist/aos.css'
-import sal from 'sal.js';
-import 'sal.js/dist/sal.css';
 
 
 function App() {
   useEffect(() => {
-    Aos.init();
-  }, [])
-  useEffect(() => {
-    sal({
-      threshold: 0.5,
+    Aos.init({
       once: true,
-      duration: 600,
-      easing: 'ease',
-    }
-
-    );
+      delay: 100,
+    });
+  
+    
+    setTimeout(() => {
+      Aos.refreshHard();
+    }, 500); 
   }, []);
+
   return (
     <>
       <Navbar />

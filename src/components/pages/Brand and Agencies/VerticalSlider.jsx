@@ -1,48 +1,62 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules'; // Import Pagination module
-// import 'swiper/swiper-bundle.min.css';
-import './style/VerticalSlider.scss';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './style/VerticalSlider.scss';  // Ensure to import your styling
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VerticalSlider = () => {
-  return (
-    <div className="slider-container">
-      <Swiper
-        direction="vertical"
-        slidesPerView={1}
-        spaceBetween={0}
-        mousewheel={true}
-        loop={true}
-        pagination={{
-          clickable: true,
-          el: '.swiper-pagination',
-        }}
-        modules={[Pagination]} // Include the Pagination module here
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div className="slide-content">
-            <img src="/images/image1.png" alt="Image 1" />
-            <div className="slide-text">Text for Image 1</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-content">
-            <img src="/images/image2.png" alt="Image 2" />
-            <div className="slide-text">Text for Image 2</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-content">
-            <img src="/images/image3.png" alt="Image 3" />
-            <div className="slide-text">Text for Image 3</div>
-          </div>
-        </SwiperSlide>
-        {/* Add more slides as needed */}
-      </Swiper>
+  const imagesRef = useRef([]);
+  const textRef = useRef(null);
 
-      {/* Pagination element */}
-      <div className="swiper-pagination"></div>
+  useEffect(() => {
+    // GSAP animation for images
+    gsap.to(imagesRef.current, {
+      xPercent: -100 * (imagesRef.current.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: textRef.current, // Trigger the scroll on the textRef instead of images
+        pin: true,
+        scrub: 1,
+        snap: 1 / (imagesRef.current.length - 1),
+        start: "top top", // Start when the text container reaches the top of the viewport
+        end: "+=3000",    // Adjust the end to ensure enough scrolling
+      },
+    });
+
+    // GSAP animation for text opacity and position
+    gsap.utils.toArray(textRef.current.children).forEach((el, index) => {
+      gsap.fromTo(el, 
+        { opacity: 0, y: 50 }, 
+        { 
+          opacity: 1, 
+          y: 0, 
+          scrollTrigger: {
+            trigger: textRef.current,
+            start: "top top+=200", 
+            end: "bottom top",
+            scrub: true,
+            toggleActions: "play reverse play reverse", // Smooth animation toggle
+          }
+        });
+    });
+  }, []);
+
+  return (
+    <div className="carousel-container">
+      <div className="images" ref={imagesRef}>
+        {['image1.png', 'image2.png', 'image3.png'].map((src, index) => (
+          <div className="image" key={index}>
+            <img src={src} alt={`carousel-${index}`} />
+          </div>
+        ))}
+      </div>
+      <div className="text" ref={textRef}>
+        <h2>Drive future-proof performance to your brand</h2>
+        <h2>KPI deliverability</h2>
+        <h2>Performance that scales</h2>
+        <h2>Incremental growth</h2>
+      </div>
     </div>
   );
 };

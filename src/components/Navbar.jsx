@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className="navbar"
       data-aos="slide-down"
-      data-sal-duration='6000'>
+      data-aos-duration='6000'>
       <div className="navbar__container max-width">
         <div onClick={() => navigate("/")} className="navbar__logo">
           <img src={logo} alt="Zeropark Logo" />

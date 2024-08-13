@@ -100,7 +100,7 @@ const SliderComponent = () => {
     return (
         <div className="slider">
             <div className="slider__container max-width">
-                <h2 data-sal='slide-up' data-sal-delay='100'>Partner with Zeropark and let your business benefit from</h2>
+                <h2 data-aos='fade-up' data-aos-delay='100'>Partner with Zeropark and let your business benefit from</h2>
                 <Slider {...settings}>
 
                     <Card

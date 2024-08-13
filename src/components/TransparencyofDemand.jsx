@@ -14,8 +14,8 @@ const TransparencyOfDemand = () => {
 
         <div className="content">
 
-          <h2 data-sal="slide-up" data-sal-dealy='100' >Transparency of Demand and Supply</h2>
-          <div data-sal="slide-up" data-sal-dealy='500' data-sal-duration='7000'>
+          <h2 data-aos="slide-up" data-aos-dealy='100' >Transparency of Demand and Supply</h2>
+          <div data-aos="slide-up" data-aos-dealy='500' data-aos-duration='7000'>
             <p>
               Zeropark prioritizes delivering fair conditions to all parties involved in our ecosystem. As an ad exchange, we openly share our supply, ensuring advertisers’ confidence in audience investments.
             </p>
@@ -28,7 +28,7 @@ const TransparencyOfDemand = () => {
           </div>
 
         </div>
-        <div className="image-container" data-sal='slide-right'>
+        <div className="image-container" data-aos='slide-right'>
           <img src={traficBanner} alt="Transparency" />
         </div>
 

@@ -42,30 +42,30 @@ const CustomSlider = () => {
           slidesPerView={1}
         >
           <SwiperSlide>
-            <div className="slide-content" ><div className="slid1"><div className="text"><h2>Access Zeeropark <br /> Commerce Media Placement Categgories</h2> <div ><button>Login to panel</button></div></div><div className="banner"><img src={slide1} alt="" data-sal='fade-right' data-sal-delay='100' /> <img src={arrow} alt="" className="arrow" data-sal='fade-right' data-sal-delay='300' /></div></div></div>
+            <div className="slide-content" ><div className="slid1"><div className="text"><h2>Access Zeeropark <br /> Commerce Media Placement Categgories</h2> <div ><button>Login to panel</button></div></div><div className="banner"><img src={slide1} alt="" data-aos='fade-right' data-aos-delay='100' /> <img src={arrow} alt="" className="arrow" data-aos='fade-right' data-aos-delay='300' /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><p>Get an early insights ebook on</p><h2>2024 Consumer Trends & Commerce Media Shopping Journey</h2> <div ><button>Learn more</button></div></div>
-              <div className='img-box' data-sal='fade-right' data-sal-delay='200'><img src={slide2} alt="" /></div></div></div>
+              <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide2} alt="" /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><p>DISCOVER OUR INSIDER INSIGHTS ON</p><h2>Black Friday, Cyber Monday &  the Q4 Holiday Shopping Season! 2023 edition</h2><div ><button>Learn more</button></div></div>
-              <div className='img-box' data-sal='fade-right' data-sal-delay='200'><img src={slide3} alt="" /></div></div></div>
+              <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide3} alt="" /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="slide-content"><div className="slid1"><div className="text"><h2>The answer to all your  <br /> Commerce Media question in one place</h2> <div ><button>visit the Zeropark blog</button></div></div><div className="banner" data-sal='fade-right' data-sal-delay='300'><img src={slide4} alt="" /> </div></div></div>
+            <div className="slide-content"><div className="slid1"><div className="text"><h2>The answer to all your  <br /> Commerce Media question in one place</h2> <div ><button>visit the Zeropark blog</button></div></div><div className="banner" data-aos='fade-right' data-aos-delay='300'><img src={slide4} alt="" /> </div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><h2>Join The Signal newsletter</h2><p>& get the latest updates on...</p><div ><button>Subcribe</button></div></div>
-              <div className='img-box' data-sal='fade-right' data-sal-delay='200'><img src={slide5} alt="" /></div></div></div>
+              <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide5} alt="" /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><p>DOWNLOAD YOUR COPY OF</p><h2>2023 Consumer trends</h2><p>& Zeropark's BFCM '22 data report</p><div ><button>Learn more</button></div></div>
-              <div className='img-box' data-sal='fade-right' data-sal-delay='200'><img src={slide6} alt="" /></div></div></div>
+              <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide6} alt="" /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><p>STY CONNECTED, INFORMED & INSPIRED</p><h2>Meet the Zeropark team during...</h2><div ><div className="events"><p>📍 Industry events</p><p>🌇 Business conferences</p><p>🌎 Digital marketing shows</p><p>🫱🏻‍🫲🏾 Community meet-ups</p></div><button>see more</button></div></div>
-              <div className='img-box' data-sal='fade-right' data-sal-delay='200'><img src={slide7} alt="" /></div></div></div>
+              <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide7} alt="" /></div></div></div>
           </SwiperSlide>
         </Swiper>
         <div className="swiper-button-prev custom-prev"> <img src={NavigationLogo} alt="" /></div>
