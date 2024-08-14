@@ -102,7 +102,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="partOfSomething">
+      <div className="partOfSomething aboutContainerWidth">
         <div className="heading">Part of something bigger</div>
         <div className="createdBySection aboutContainer">
           <div className="innerCards">
@@ -168,7 +168,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="meetTheTeam aboutContainer">
+      <div className="meetTheTeam aboutContainerWidth">
         <div className="upper">
           <div className="heading">
             Meet the people <br /> behind Zeropark
