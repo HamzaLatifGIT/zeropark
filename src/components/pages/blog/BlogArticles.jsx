@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // style
 import './style/BlogArticles.scss'
@@ -17,6 +18,28 @@ import { Option } from 'antd/es/mentions';
 
 
 const articles = [
+
+  {
+    image: img2,
+    title: 'Zeropark Media Buying Tips: Email Placements Performance Could Grow 30%',
+    author: 'Gabriela Cendrzak',
+    date: '02 Jul, 2024',
+    text: 'Gear up, as we have an interesting insight to share about what’s getting hot in Commerce Media 🔥  You may…'
+  },
+  {
+    image: img3,
+    title: 'The evolution and future of monetization: the publisher cookies landscape',
+    author: 'Gabriela Cendrzak',
+    date: '02 Jul, 2024',
+    text: '📢📢 COOKIES UPDATE 📢📢 Just a day after we launched this article on the cookies landscape for publishers, Anthony Chavez,…'
+  },
+  {
+    image: img4,
+    title: 'Content monetization: How to increase revenue with commerce media?',
+    author: 'Gabriela Cendrzak',
+    date: '02 Jul, 2024',
+    text: 'The digital advertising landscape evolves with no breaks, and website owners indeed need to constantly seek new (or rather incremental)ways…'
+  },
 
   {
     image: img2,
@@ -73,6 +96,8 @@ const data = [
 
 
 const BlogArticles = () => {
+  const Navigate = useNavigate()
+
   const [showMore, setShowMore] = useState(false);
   const itemsToShow = showMore ? data : data.slice(0, 3);
 
@@ -121,7 +146,7 @@ const BlogArticles = () => {
                 </div>
               </div>
               {articles.map((article, index) => (
-                <article key={index} className="article">
+                <article key={index} className="article" onClick={() => Navigate("details")}>
                   <img src={article.image} alt="" />
                   <div className="content">
                     <h2>{article.title}</h2>

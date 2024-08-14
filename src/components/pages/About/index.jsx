@@ -104,7 +104,7 @@ const About = () => {
 
       <div className="partOfSomething">
         <div className="heading">Part of something bigger</div>
-        <div className="createdBySection container">
+        <div className="createdBySection aboutContainer">
           <div className="innerCards">
             <div className="upperCards">
               <div className="left">
@@ -143,7 +143,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="blueSection container">
+        <div className="blueSection aboutContainer">
           <div className="inner">
             <div className="left">
               <div className="blueSection_heading">
@@ -168,7 +168,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="meetTheTeam container">
+      <div className="meetTheTeam aboutContainer">
         <div className="upper">
           <div className="heading">
             Meet the people <br /> behind Zeropark
@@ -209,7 +209,7 @@ const About = () => {
           </Slider>
         </div>
 
-        <div className="basedGlobally container">
+        <div className="basedGlobally aboutContainer">
           <div className="heading">Based globally</div>
           <div className="map">
             <img
@@ -220,7 +220,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="recognizeBy container">
+        <div className="recognizeBy aboutContainer">
           <div className="heading">Recognized by</div>
           <div className="images">
             {[

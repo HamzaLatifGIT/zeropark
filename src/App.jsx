@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 // Components
 import Home from "./components/pages/Home";
@@ -16,26 +16,33 @@ import 'aos/dist/aos.css'
 
 
 function App() {
+  const Location = useLocation()
+
   useEffect(() => {
     Aos.init({
       once: true,
       delay: 100,
     });
-  
-    
+
+
     setTimeout(() => {
       Aos.refresh();
-    }, 500); 
+    }, 500);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [Location.pathname])
 
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<BlogDetails />} />
-        {/* <Route path="/blog" element={<Blog />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/Solution" element={<Brandandagencies />} />
-        <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
+        <Route path="/blog/details" element={<BlogDetails />} />
       </Routes>
       <Footer />
     </>

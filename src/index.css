@@ -3,10 +3,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap");
 
-
-
-
-
 * {
   padding: 0%;
   margin: 0%;
@@ -28,7 +24,6 @@ body {
     justify-content: space-between;
   }
 }
-
 
 .max-width {
   padding-left: 16px;
@@ -92,7 +87,8 @@ img {
   }
 }
 
-.container {
+.container,
+.aboutContainer {
   max-width: 1280px;
   margin: 0 auto;
 }
