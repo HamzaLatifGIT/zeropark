@@ -2,72 +2,99 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './style/BlogDetails.scss';
-import { GoHome } from "react-icons/go";
+import { GoHome, GoSearch } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdMailOutline } from 'react-icons/md';
 import img from '../../../assets/Article-banner/banner-1.jpg'
+import { Input } from 'antd';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const BlogDetails = () => {
   const headingsRef = useRef([]);
   const contentSectionsRef = useRef([]);
+  const sidebarRef = useRef(null);
 
   useEffect(() => {
-    contentSectionsRef.current.forEach((section, index) => {
-      gsap.to(headingsRef.current[index], {
-        scrollTrigger: {
-          trigger: section,
-          start: 'top center',
-          end: 'bottom center',
-          scrub: true,
-          toggleActions: 'play none none reverse',
-        },
-        opacity: 1,
-        duration: 1,
-      });
+    headingsRef.current.forEach((heading, index) => {
+      gsap.fromTo(
+        heading,
+        { opacity: 0.2 },  // Start with opacity 0
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: contentSectionsRef.current[index],
+            start: 'top center',
+            end: 'bottom center',
+            scrub: true,
+            onEnter: () => syncSidebarScroll(index),
+            onEnterBack: () => syncSidebarScroll(index),
+          }
+        }
+      );
     });
   }, []);
 
+  const syncSidebarScroll = (index) => {
+    const activeHeading = headingsRef.current[index];
+    if (sidebarRef.current && activeHeading) {
+      const headingOffsetTop = activeHeading.offsetTop;
+      sidebarRef.current.scrollTo({
+        top: headingOffsetTop - sidebarRef.current.clientHeight / 2 + activeHeading.clientHeight / 2,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="blog__container">
-      <aside className="sidebar">
-        <h2 ref={(el) => headingsRef.current[0] = el} className="sidebar-heading">What is publisher monetization?</h2>
-        <h2 ref={(el) => headingsRef.current[1] = el} className="sidebar-heading">Who can monetize their content?</h2>
-        <h2 ref={(el) => headingsRef.current[2] = el} className="sidebar-heading">Content Sites</h2>
-        <h2 ref={(el) => headingsRef.current[3] = el} className="sidebar-heading">Apps and extensions</h2>
-        <h2 ref={(el) => headingsRef.current[4] = el} className="sidebar-heading">Browsers and search engines</h2>
-        <h2 ref={(el) => headingsRef.current[5] = el} className="sidebar-heading">Buy Now Pay Later (BNPL) services</h2>
-        <h2 ref={(el) => headingsRef.current[6] = el} className="sidebar-heading">Email services</h2>
-        <h2 ref={(el) => headingsRef.current[7] = el} className="sidebar-heading">Social media sites</h2>
-        <h2 ref={(el) => headingsRef.current[8] = el} className="sidebar-heading">6 most efficient monetization strategies</h2>
-        <h2 ref={(el) => headingsRef.current[9] = el} className="sidebar-heading">Commerce Media: The Gold Standard in Monetization</h2>
-        <h2 ref={(el) => headingsRef.current[10] = el} className="sidebar-heading">Affiliate Marketing</h2>
-        <h2 ref={(el) => headingsRef.current[11] = el} className="sidebar-heading">Programmatic Advertising</h2>
-        <h2 ref={(el) => headingsRef.current[12] = el} className="sidebar-heading">Subscription Models</h2>
-        <h2 ref={(el) => headingsRef.current[13] = el} className="sidebar-heading">Sponsored Content</h2>
-        <h2 ref={(el) => headingsRef.current[14] = el} className="sidebar-heading">Native Advertising</h2>
-        <h2 ref={(el) => headingsRef.current[15] = el} className="sidebar-heading">5 Best Ad Monetization Solutions</h2>
-        <h2 ref={(el) => headingsRef.current[16] = el} className="sidebar-heading">Zeropark Commerce Media: A Complete Solution for Publishers</h2>
-        <h2 ref={(el) => headingsRef.current[17] = el} className="sidebar-heading">Google AdSense: The Classic Ad Network</h2>
-        <h2 ref={(el) => headingsRef.current[18] = el} className="sidebar-heading">Adsolutely: The Next-Gen Monetization Platform</h2>
-        <h2 ref={(el) => headingsRef.current[19] = el} className="sidebar-heading">Media.net: Yahoo! Network Partner</h2>
-        <h2 ref={(el) => headingsRef.current[20] = el} className="sidebar-heading">Ezoic: AI-Powered Optimization</h2>
-        <h2 ref={(el) => headingsRef.current[21] = el} className="sidebar-heading">What is Commerce Media?</h2>
-        <h2 ref={(el) => headingsRef.current[22] = el} className="sidebar-heading">Monetizing with Zeropark Commerce Media</h2>
-        <h2 ref={(el) => headingsRef.current[23] = el} className="sidebar-heading">Unlocking New Revenue Streams</h2>
-        <h2 ref={(el) => headingsRef.current[24] = el} className="sidebar-heading">Access to Premium Brand Ad Budgets</h2>
-        <h2 ref={(el) => headingsRef.current[25] = el} className="sidebar-heading">Consistent Revenue and Steady Budgets</h2>
-        <h2 ref={(el) => headingsRef.current[26] = el} className="sidebar-heading">Incremental Yield (with No Cookies Involved)</h2>
-        <h2 ref={(el) => headingsRef.current[27] = el} className="sidebar-heading">Full Control Over Brand Image</h2>
-        <h2 ref={(el) => headingsRef.current[28] = el} className="sidebar-heading">Enhanced Shopping Experience</h2>
-        <h2 ref={(el) => headingsRef.current[29] = el} className="sidebar-heading">Easy Integration and Setup</h2>
-        <h2 ref={(el) => headingsRef.current[30] = el} className="sidebar-heading">Transparency</h2>
-        <h2 ref={(el) => headingsRef.current[31] = el} className="sidebar-heading">Conclusion</h2>
+    <div className="blog__container max-width">
+      <aside className="sidebar" ref={sidebarRef}>
+        {[
+          "What is publisher monetization?",
+          "Who can monetize their content?",
+          "Content Sites",
+          "Apps and extensions",
+          "Browsers and search engines",
+          "Buy Now Pay Later (BNPL) services",
+          "Email services",
+          "Social media sites",
+          "6 most efficient monetization strategies",
+          "Commerce Media: The Gold Standard in Monetization",
+          "Affiliate Marketing",
+          "Programmatic Advertising",
+          "Subscription Models",
+          "Sponsored Content",
+          "Native Advertising",
+          "5 Best Ad Monetization Solutions",
+          "Zeropark Commerce Media: A Complete Solution for Publishers",
+          "Google AdSense: The Classic Ad Network",
+          "Adsolutely: The Next-Gen Monetization Platform",
+          "Media.net: Yahoo! Network Partner",
+          "Ezoic: AI-Powered Optimization",
+          "What is Commerce Media?",
+          "Monetizing with Zeropark Commerce Media",
+          "Unlocking New Revenue Streams",
+          "Access to Premium Brand Ad Budgets",
+          "Consistent Revenue and Steady Budgets",
+          "Incremental Yield (with No Cookies Involved)",
+          "Full Control Over Brand Image",
+          "Enhanced Shopping Experience",
+          "Easy Integration and Setup",
+          "Transparency",
+          "Conclusion"
+        ].map((title, index) => (
+          <h2
+            key={index}
+            ref={(el) => headingsRef.current[index] = el}
+            className="sidebar-heading"
+          >
+            {title}
+          </h2>
+        ))}
       </aside>
       <div className="content">
-        <section><div className="Blog__header"><ul><li><GoHome />Home</li> <IoIosArrowForward /><li>Blog</li><IoIosArrowForward /><li>Title</li></ul></div></section>
-        <section><div className="tile"><h2>Monetization solutions for publishers: Commerce Media is among the most efficient monetization strategies.</h2></div><span>Gabriela Cendrzak . 02 Jul, 2024</span><img src={img} alt="" /><div><p>In today’s rapidly evolving digital landscape, finding effective ways to monetize content is crucial for publishers seeking   <strong> sustainable revenue streams</strong>         . Unfortunately, they face several significant challenges that hinder effective <strong>site monetization</strong></p> <p>Some “traditional” solutions for publisher monetization have simply become outdated. We’re talking about <strong>shrinking earnings from ad revenue streams</strong>, we are talking about <strong>plummeting conversion rates</strong>, and increasing <strong>banner blindness</strong></p><p>Compounding these issues is the overwhelmingly <strong>poor user experience</strong> for visitors, often caused by <strong>intrusive ads and slow-loading pages</strong>, which can lead to decreased engagement and higher bounce rates.</p><p>So how, as a publisher, can you boost the efficiency of your monetization? Let’s explore the <strong>content monetization</strong>  strategy offered by commerce media. </p></div></section>
+        <section><div className="Blog__header"><ul><li style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}><GoHome /> Home</li> <IoIosArrowForward /><li>Blog</li><IoIosArrowForward /><li>Title</li></ul></div></section>
+        <section><div className="tile"><h2>Monetization solutions for publishers: Commerce Media is among the most efficient monetization strategies.</h2> <span style={{ color: '#666', margin: '2rem 0rem' }}>Gabriela Cendrzak . 02 Jul, 2024</span></div><img src={img} alt="" /><div><p>In today’s rapidly evolving digital landscape, finding effective ways to monetize content is crucial for publishers seeking   <strong> sustainable revenue streams</strong>         . Unfortunately, they face several significant challenges that hinder effective <strong>site monetization</strong></p> <p>Some “traditional” solutions for publisher monetization have simply become outdated. We’re talking about <strong>shrinking earnings from ad revenue streams</strong>, we are talking about <strong>plummeting conversion rates</strong>, and increasing <strong>banner blindness</strong></p><p>Compounding these issues is the overwhelmingly <strong>poor user experience</strong> for visitors, often caused by <strong>intrusive ads and slow-loading pages</strong>, which can lead to decreased engagement and higher bounce rates.</p><p>So how, as a publisher, can you boost the efficiency of your monetization? Let’s explore the <strong>content monetization</strong>  strategy offered by commerce media. </p></div></section>
         <section ref={(el) => contentSectionsRef.current[0] = el} className="section">
           <h4>What is publisher monetization?</h4>
           <p>Publisher monetization refers to platform owners generating revenue from their online content. This involves leveraging various publisher monetization strategies, such as placing ads on their websites, to turn web traffic into income.</p>
@@ -295,20 +322,36 @@ const BlogDetails = () => {
           <p>Whether you’re looking at how to monetize on a free website or boost ad revenue, these strategies and insights will help you navigate the complex world of the online publishing industry effectively.</p>
         </section>
       </div>
-      <div className="subscribe">
-        <div className='icon'><MdMailOutline size={50} style={{ color: 'white' }} /></div>
-        <h2>Follow The Signal</h2>
-        <p>Subscribe to The Signal newsletter by Zeropark & stay on top of the latest trends with industry updates delivered straight to your inbox!</p>
-        <form>
-          <input type="text" placeholder="First name" />
-          <input type="email" placeholder="Business email" />
-          <div className="checkbox-container">
-            <input type="checkbox" id="consent" />
-            <label htmlFor="consent">I agree to receive commercial information regarding Zeropark via email.</label>
+      <aside>
+        <div className='right-sidebar'>
+
+          <Input placeholder='Search articles' prefix={<GoSearch />} />
+          <div className="tags">
+            <h5>Tags.</h5><br />
+            <ul> <li> Advertising Strategies</li>
+              <li>Futureproof</li>
+
+              <li>Monatization</li>
+              <li>Publisher</li>
+            </ul>
           </div>
-          <button type="submit" className='btn'>Subscribe</button>
-        </form>
-      </div>
+          <div className="subscribe">
+            <div className='icon'><MdMailOutline size={50} style={{ color: 'white' }} /></div>
+            <h2>Follow The Signal</h2>
+            <p>Subscribe to The Signal newsletter by Zeropark & stay on top of the latest trends with industry updates delivered straight to your inbox!</p>
+            <form>
+              <input type="text" placeholder="First name" />
+              <input type="email" placeholder="Business email" />
+              <div className="checkbox-container">
+                <input type="checkbox" id="consent" />
+                <label htmlFor="consent">I agree to receive commercial information regarding Zeropark via email.</label>
+              </div>
+              <button type="submit" className='btn'>Subscribe</button>
+            </form>
+            <div className='info'><span>Commerce Media Tech Sp. z o.o., Krakow, Poland, is the controller of your personal data. It will be processed to send you The Signal newsletter and for our marketing purposes. Please see more information here.</span></div>
+          </div>
+        </div>
+      </aside>
     </div>
   );
 };
