@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./components/pages/About";
 import Brandandagencies from "./components/pages/Brand and Agencies/Brandandagencies";
-import VerticalSlider from "./components/pages/Brand and Agencies/VerticalSlider";
+import BlogDetails from "./components/pages/blog/BlogDetails";
 
 // Reveal Animations
 import Aos from "aos";
@@ -24,7 +24,7 @@ function App() {
   
     
     setTimeout(() => {
-      Aos.refreshHard();
+      Aos.refresh();
     }, 500); 
   }, []);
 
@@ -32,10 +32,10 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/" element={<BlogDetails />} />
+        {/* <Route path="/blog" element={<Blog />} />
         <Route path="/Solution" element={<Brandandagencies />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} /> */}
       </Routes>
       <Footer />
     </>

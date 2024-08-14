@@ -9,6 +9,7 @@ import CustomSlider from '../../CustomSlider'
 import BrandSlider from './BrandSlider'
 import bgvideo from '../../../assets/file2.mp4'
 
+
 function Brandandagencies() {
   return (
     <>
