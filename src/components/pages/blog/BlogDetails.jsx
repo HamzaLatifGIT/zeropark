@@ -49,6 +49,7 @@ const BlogDetails = () => {
   return (
     <div className="blog__container max-width">
       <aside className="sidebar" ref={sidebarRef}>
+        <div style={{paddingBottom:'5px', fontWeight:'700'}}><p>Contents</p></div>
         {[
           "What is publisher monetization?",
           "Who can monetize their content?",
