@@ -1,17 +1,13 @@
-// SwiperComponent.jsx
 import React from 'react';
 
-//Swiper Slider
+// Swiper Slider :
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-//Style
-import './style/CustomSlider.scss'; // Import your custom styles
-
-//Assets | Icons | Logos
+// Assets | Icons | Logos :
 import NavigationLogo from '../assets/icons/next-icon.svg'
 import arrow from '../assets/banners/arrow@2x.webp'
 import slide1 from '../assets/banners/panels@2x.webp'
@@ -21,6 +17,11 @@ import slide4 from '../assets/banners/img@4x .webp'
 import slide5 from '../assets/banners/img@5x.webp'
 import slide6 from '../assets/banners/img@6x.webp'
 import slide7 from '../assets/banners/img@7x.webp'
+import lines from '../assets/banners/lines2.svg'
+
+
+// css :
+import './style/CustomSlider.scss'; 
 
 
 const CustomSlider = () => {
@@ -42,7 +43,7 @@ const CustomSlider = () => {
           slidesPerView={1}
         >
           <SwiperSlide>
-            <div className="slide-content" ><div className="slid1"><div className="text"><h2>Access Zeeropark <br /> Commerce Media Placement Categgories</h2> <div ><button>Login to panel</button></div></div><div className="banner"><img src={slide1} alt="" data-aos='fade-right' data-aos-delay='100' /> <img src={arrow} alt="" className="arrow" data-aos='fade-right' data-aos-delay='300' /></div></div></div>
+            <div className="slide-content"  style={{backgroundColor:'unset !important'}}><div className="slid1"><div className="text"><h2>Access Zeeropark <br /> Commerce Media Placement Categgories</h2> <div ><button>Login to panel</button></div></div><div className="banner"><img src={slide1} alt="" data-aos='fade-right' data-aos-delay='100' /> <img src={arrow} alt="" className="arrow" data-aos='fade-right' data-aos-delay='300' /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><p>Get an early insights ebook on</p><h2>2024 Consumer Trends & Commerce Media Shopping Journey</h2> <div ><button>Learn more</button></div></div>
@@ -53,7 +54,7 @@ const CustomSlider = () => {
               <div className='img-box' data-aos='fade-right' data-aos-delay='200'><img src={slide3} alt="" /></div></div></div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="slide-content"><div className="slid1"><div className="text"><h2>The answer to all your  <br /> Commerce Media question in one place</h2> <div ><button>visit the Zeropark blog</button></div></div><div className="banner" data-aos='fade-right' data-aos-delay='300'><img src={slide4} alt="" /> </div></div></div>
+            <div className="slide-content custome"><div className="slide2"><div className="text"><h2>The answer to all your  <br /> Commerce Media question in one place</h2> <div ><button>visit the Zeropark blog</button></div></div><div className="banner" data-aos='fade-right' data-aos-delay='300'><img src={slide4} alt="" /> <img src={lines} alt="" className='lines' /> </div></div></div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slide-content"><div className="flex"><div className='text'><h2>Join The Signal newsletter</h2><p>& get the latest updates on...</p><div ><button>Subcribe</button></div></div>

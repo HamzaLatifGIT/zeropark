@@ -1,9 +1,9 @@
 import React from 'react';
 
-//style
+// css :
 import '../../style/TransparencyOfDemand.scss';
 
-//Assets | banner
+// Assets | Icons | Logo :
 import discover from '../../../assets/banners/discover-img2.webp'
 
 const AdvertisingSolution = () => {
@@ -24,11 +24,10 @@ const AdvertisingSolution = () => {
           <button>Contact us</button>
 
         </div>
-        <div className="image-container" style={{ gridRowStart: 'unset !important', gridColumnStart: '7' }} data-aos='slide-left'>
+        <div className="image-container" style={{ gridRowStart: 'unset !important', gridColumnStart: '7' }} data-aos='fade-left'>
           <img src={discover} alt="Transparency" />
         </div>
-
-      </div>
+       </div>
     </div>
   );
 }

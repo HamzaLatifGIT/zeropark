@@ -1,4 +1,6 @@
 import React from 'react'
+
+// Components
 import HeroSection from '../../HeroSection'
 import Brands from './Brands'
 import BrandsConnect from './BrandsConnect'
@@ -7,6 +9,8 @@ import HeadOfMedia from './HeadOfMedia'
 import BrandAdvertising from './BrandAdvertising'
 import CustomSlider from '../../CustomSlider'
 import BrandSlider from './BrandSlider'
+
+// Assets :
 import bgvideo from '../../../assets/file2.mp4'
 
 

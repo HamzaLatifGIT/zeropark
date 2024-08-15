@@ -8,11 +8,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./components/pages/About";
 import Brandandagencies from "./components/pages/Brand and Agencies/Brandandagencies";
-import BlogDetails from "./components/pages/blog/BlogDetails";
 
 // Reveal Animations
 import Aos from "aos";
 import 'aos/dist/aos.css'
+
 
 
 function App() {
@@ -21,21 +21,21 @@ function App() {
       once: true,
       delay: 100,
     });
-  
-    
+
+
     setTimeout(() => {
       Aos.refresh();
-    }, 500); 
+    }, 500);
   }, []);
 
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<BlogDetails />} />
-        {/* <Route path="/blog" element={<Blog />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/Solution" element={<Brandandagencies />} />
-        <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>

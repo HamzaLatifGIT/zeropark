@@ -1,12 +1,12 @@
 import React from 'react'
 
-//Ant Design
+// Ant Design :
 import { Rate } from 'antd'
 
-//style
+// css :
 import './style/HeadOfMedia.scss'
 
-//Assets | Icons | Logo
+// Assets | Icons | Logo :
 import Avatar from '../../../assets/avatar-amit.webp'
 
 

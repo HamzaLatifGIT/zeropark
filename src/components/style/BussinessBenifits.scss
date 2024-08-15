@@ -1,6 +1,5 @@
 .slider {
 
-
     &__container {
         margin: auto;
         padding-top: 10rem;
@@ -107,7 +106,8 @@
         border-color: #aaa;
         background: #e0e0e0;
     }
-
+    
+    //Media Queries
     @media screen and (max-width:1024px) {
         .slick-prev {
             right: 85% !important;
@@ -121,7 +121,6 @@
 
 }
 
-//Media Queries
 
 @media screen and (max-width:1024px) {
 

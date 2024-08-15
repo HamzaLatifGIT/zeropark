@@ -76,8 +76,6 @@
             border: 1px solid rgb(242 242 242);
             border-radius: .375rem;
 
-
-
             .grid-1 {
               grid-template-columns: repeat(9, minmax(0, 1fr));
               display: grid;
@@ -151,7 +149,6 @@
       }
 
       .sidebar {
-
         grid-template-columns: repeat(12, minmax(0, 1fr));
 
         .check-box {
@@ -178,8 +175,11 @@
           border-radius: .375rem;
           padding: 20px;
           border-radius: 5px;
-          text-align: center;
           margin-top: 1.5rem;
+          top: 4rem;
+          position: sticky;
+          display: block;
+          top: 7rem;
 
           .icon {
             display: flex;
@@ -198,6 +198,7 @@
             font-size: 1.5rem;
             line-height: 2rem;
             margin-bottom: 1rem;
+            text-align: center;
           }
 
           p {
@@ -205,6 +206,8 @@
             line-height: 1.25rem;
             margin-bottom: 1.5rem;
             opacity: .8;
+            text-align: center;
+
           }
 
           form {
@@ -224,11 +227,16 @@
               display: flex;
               align-items: flex-start;
               margin-bottom: 10px;
+              color: #9696a0;
+              font-size: 12px;
+              opacity: .7;
 
               input[type="checkbox"] {
                 margin-right: 10px;
                 width: 45px;
                 opacity: .7;
+                position: relative;
+                top: -7px;
               }
 
               label {
@@ -252,10 +260,19 @@
               }
             }
           }
+
+          .info {
+            margin-top: 5px;
+
+            span {
+              color: #9696a0;
+              font-size: 12px;
+              line-height: 1.3;
+
+            }
+          }
         }
       }
-
-
     }
   }
 }

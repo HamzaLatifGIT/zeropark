@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react';
 
-//style
-import './style/SocialBrand.scss'
-
-//Assets | Icons | logo
+// Assets | Icons | logo :
 import banner from '../assets/banners/Screenshot 2024-08-05 183719.png'
 import banner2 from '../assets/banners/all-logos-mobile.svg'
 
-
+// css :
+import './style/SocialBrand.scss'
 
 
 const SocialBrand = () => {

@@ -1,15 +1,15 @@
 import React from 'react';
 
-// style
-import './style/AffiliateNetworks.scss';
-
-//Assets | logo 
+// Assets | logo | Icons :
 import Awin from '../assets/Brands-logo/logo-awin.svg'
 import Amitad from '../assets/Brands-logo/logo-amitad.svg'
 import Impact from '../assets/Brands-logo/logo-impact.svg'
 import Rakuten from '../assets/Brands-logo/logo-rakuten.svg'
 import Avantlink from '../assets/Brands-logo/logo-avantlink.svg'
 import Andmore from '../assets/Brands-logo/logo-andmore.svg'
+
+// css :
+import './style/AffiliateNetworks.scss';
 
 
 const AffiliateNetworks = () => {

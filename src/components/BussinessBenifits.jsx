@@ -1,15 +1,11 @@
 import React from 'react';
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-//React Slick Slider
+// React Slick Slider :
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-//style
-import './style/BussinessBenifits.scss'
-
-//Assets | Logo | Icons
+// Assets | Logo | Icons :
 import icon1 from '../assets/icons/ico-1.svg'
 import icon2 from '../assets/icons/ico-2.svg'
 import icon3 from '../assets/icons/ico-3.svg'
@@ -19,6 +15,10 @@ import icon6 from '../assets/icons/ico-6.svg'
 import icon7 from '../assets/icons/ico-7.svg'
 import icon8 from '../assets/icons/ico-8.svg'
 import icon9 from '../assets/icons/ico-9.svg'
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+
+// css :
+import './style/BussinessBenifits.scss'
 
 
 const Card = ({ icon, title, description }) => {

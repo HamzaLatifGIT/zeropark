@@ -1,15 +1,15 @@
 import React from 'react';
 
-//Swiper Slider
+// Swiper Slider :
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
-//style
+// css :
 import './style/BrandSlider.scss'
 
-//Assets | Icons | Logo
+// Assets | Icons | Logo :
 import slide1 from '../../../assets/BrandSlider/slide-media-services@2x.webp'
 import slide2 from '../../../assets/BrandSlider/slide-proprietary-tech@2x.webp'
 import slide3 from '../../../assets/BrandSlider/slide-future-proof-solutions@2x.webp'

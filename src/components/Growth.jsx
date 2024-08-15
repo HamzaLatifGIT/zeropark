@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
+
+// Assets | Icons | logo :
 import CountUp from 'react-countup';
 
-//style
+// css :
 import './style/Growth.scss'
 
 const CommerceMedia = () => {
     const [activeTab, setActiveTab] = useState('Monetization');
-    
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
     };
-
-
- 
-
 
     let content;
     if (activeTab === 'Monetization') {
@@ -31,14 +28,14 @@ const CommerceMedia = () => {
                         <span>Advertiser Budgets Waiting to be Unlocked</span>
                     </div>
                     <div className="stat-item">
-                        <p>~<CountUp end={100} enableScrollSpy={true}   />%
+                        <p>~<CountUp end={100} enableScrollSpy={true} />%
 
                         </p>
                         <hr />
                         <span style={{ marginTop: '47px' }} >Sellout Rate</span>
                     </div>
                     <div className="stat-item">
-                        <p>+$<CountUp end={15} enableScrollSpy={true}  />
+                        <p>+$<CountUp end={15} enableScrollSpy={true} />
                             <small>Million</small> </p>
 
                         <hr />
@@ -53,7 +50,7 @@ const CommerceMedia = () => {
                 <p data-aos='fade-up' >Zeropark Commerce Media's benefits for brand advertisers include secure supply distribution, transparent performance and optimization for long-tailed campaigns.<br /> The continuity and growth of our Publisher Portfolio allows all to scale performance in the long and short run.</p>
                 <div className="statistics" data-aos='fade-up'>
                     <div className="stat-item">
-                        <p>+<CountUp end={8} enableScrollSpy={true}  />%</p>
+                        <p>+<CountUp end={8} enableScrollSpy={true} />%</p>
                         <hr />
                         <span style={{ marginTop: '47px' }}>Average Conversion Rate</span>
                     </div>

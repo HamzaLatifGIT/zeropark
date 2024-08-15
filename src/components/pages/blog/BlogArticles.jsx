@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 
-// style
+// css :
 import './style/BlogArticles.scss'
 
 
-// Assets | logo | Icons
+// Assets | logo | Icons :
 import { MdMailOutline } from "react-icons/md";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import img1 from '../../../assets/Article-banner/banner-1.jpg'
 import img2 from '../../../assets/Article-banner/banner-2.jpg'
 import img3 from '../../../assets/Article-banner/banner-3.jpg'
 import img4 from '../../../assets/Article-banner/banner-4.jpg'
-import { Checkbox, Select } from 'antd';
-import { Option } from 'antd/es/mentions';
+
 
 
 
@@ -160,6 +159,7 @@ const BlogArticles = () => {
                 </div>
                 <button type="submit" className='btn'>Subscribe</button>
               </form>
+              <div className='info'><span>Commerce Media Tech Sp. z o.o., Krakow, Poland, is the controller of your personal data. It will be processed to send you The Signal newsletter and for our marketing purposes. Please see more information here.</span></div>
             </div>
           </section>
         </div>

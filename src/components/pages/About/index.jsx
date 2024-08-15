@@ -1,11 +1,14 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
+import Slider from "react-slick";
+
+// Components :
 import Button from "../../Button";
 
+// Assets | Icons | Logo :
 import card1Right from "../../../assets/card1Right.svg";
 
+// css :
 import "./About.scss";
-import Slider from "react-slick";
 
 const NextArrow = ({ onClick }) => {
   return (

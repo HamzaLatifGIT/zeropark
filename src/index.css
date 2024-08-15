@@ -29,6 +29,15 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+
+  h1,
+  h2 {
+    font-size: 1.85rem !important;
+  }
+}
+
+
 
 .max-width {
   padding-left: 16px;
