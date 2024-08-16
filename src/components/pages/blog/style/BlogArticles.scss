@@ -69,11 +69,7 @@
           .Article-first {
             grid-column: span 12 / span 12;
             border: 1px solid rgb(242 242 242);
-<<<<<<< HEAD
             border-radius: 0.375rem;
-=======
-            border-radius: .375rem;
->>>>>>> bcad9e06c1932958761ba898cc1604d9418ebe46
 
             .grid-1 {
               grid-template-columns: repeat(9, minmax(0, 1fr));
@@ -167,16 +163,11 @@
           padding: 20px;
           border-radius: 5px;
           margin-top: 1.5rem;
-<<<<<<< HEAD
-          position: sticky;
-          top: 120px;
-=======
           top: 4rem;
           position: sticky;
           display: block;
           top: 7rem;
 
->>>>>>> bcad9e06c1932958761ba898cc1604d9418ebe46
           .icon {
             display: flex;
             align-items: center;
@@ -201,13 +192,9 @@
             font-size: 0.875rem;
             line-height: 1.25rem;
             margin-bottom: 1.5rem;
-<<<<<<< HEAD
-            opacity: 0.8;
-=======
             opacity: .8;
             text-align: center;
 
->>>>>>> bcad9e06c1932958761ba898cc1604d9418ebe46
           }
 
           form {
@@ -234,13 +221,9 @@
               input[type="checkbox"] {
                 margin-right: 10px;
                 width: 45px;
-<<<<<<< HEAD
-                opacity: 0.7;
-=======
                 opacity: .7;
                 position: relative;
                 top: -7px;
->>>>>>> bcad9e06c1932958761ba898cc1604d9418ebe46
               }
 
               label {
@@ -287,8 +270,7 @@
     .grid {
       grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
 
-      .articles {
-      }
+      .articles {}
     }
 
     .sidebar {

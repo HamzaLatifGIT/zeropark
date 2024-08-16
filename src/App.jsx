@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 // Components
 import Home from "./components/pages/Home";
 import Blog from "./components/pages/blog/Blog";
+import BlogDetails from "./components/pages/blog/BlogDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./components/pages/About";
