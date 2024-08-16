@@ -1,12 +1,20 @@
 import React, { useEffect, useRef } from 'react';
+
+// Gsap :
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './style/BlogDetails.scss';
+
+// Antd :
+import { Input } from 'antd';
+
+//Assets | Icons | Logo :
 import { GoHome, GoSearch } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdMailOutline } from 'react-icons/md';
 import img from '../../../assets/Article-banner/banner-1.jpg'
-import { Input } from 'antd';
+
+//css :
+import './style/BlogDetails.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +27,7 @@ const BlogDetails = () => {
     headingsRef.current.forEach((heading, index) => {
       gsap.fromTo(
         heading,
-        { opacity: 0.2 },  // Start with opacity 0
+        { opacity: 0.2 },
         {
           opacity: 1,
           scrollTrigger: {
@@ -49,7 +57,7 @@ const BlogDetails = () => {
   return (
     <div className="blog__container max-width">
       <aside className="sidebar" ref={sidebarRef}>
-        <div style={{paddingBottom:'5px', fontWeight:'700'}}><p>Contents</p></div>
+        <div style={{ paddingBottom: '5px', fontWeight: '700' }}><p>Contents</p></div>
         {[
           "What is publisher monetization?",
           "Who can monetize their content?",

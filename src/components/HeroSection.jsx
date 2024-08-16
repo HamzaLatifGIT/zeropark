@@ -1,12 +1,11 @@
 import React from 'react';
 
-//style
+// css :
 import './style/HeroSection.scss';
 
-//Assets | Icons
 
 
-const HeroSection = ({title,text,url}) => {
+const HeroSection = ({ title, text, url }) => {
     return (
         <section className="hero-section ">
             <video className="background-video" autoPlay muted>
@@ -15,7 +14,6 @@ const HeroSection = ({title,text,url}) => {
             <div className="hero-section__content max-width" >
                 <div data-aos='fade-in' data-aos-delay='50'>
                     <div><p>{text}</p></div>
-
                     <div>{title}</div>
                     <div><button className="sign-up-btn">Sign up</button></div>
                 </div>

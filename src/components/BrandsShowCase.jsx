@@ -1,10 +1,6 @@
 import React from 'react';
 
-//Style
-import './style/BrandsShowCase.scss';
-
-// Assets | logo |Icons
-
+// Assets | logo |Icons :
 import VivintLogo from '../assets/Brands-logo/vivint-logo.svg';
 import BassProShopsLogo from '../assets/Brands-logo/logo-bass.svg';
 import CabelasLogo from '../assets/Brands-logo/logo-cabelas.svg';
@@ -13,7 +9,6 @@ import ParamountLogo from '../assets/Brands-logo/logo-paramount.svg';
 import ScheelsLogo from '../assets/Brands-logo/logo-scheels.svg';
 import LGLogo from '../assets/Brands-logo/logo-lg.svg';
 import eBayLogo from '../assets/Brands-logo/logo-ebay.svg';
-
 import KlarnaLogo from '../assets/Brands-logo/logo-klarna.svg';
 import MSNLogo from '../assets/Brands-logo/logo-msn.svg';
 import OperaLogo from '../assets/Brands-logo/logo-opera.svg';
@@ -24,6 +19,9 @@ import AfterpayLogo from '../assets/Brands-logo/logo-afterpay.svg';
 import ForbesLogo from '../assets/Brands-logo/logo-forbes.svg';
 import wirecutterlogo from '../assets/Brands-logo/logo-wirecutter.svg';
 import andmorelogo from '../assets/Brands-logo/logo-andmore.svg';
+
+// css :
+import './style/BrandsShowCase.scss';
 
 const BrandsShowcase = () => {
   const demandPartners = [
@@ -76,7 +74,7 @@ const BrandsShowcase = () => {
           <div className="partners">
             {publishingPartners.map((partner, index) => (
               <div className="partner" key={index} data-aos='fade-right' data-aos-delay='500'>
-                <img src={partner.logo} alt={partner.name}  />
+                <img src={partner.logo} alt={partner.name} />
               </div>
             ))}
           </div>

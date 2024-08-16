@@ -1,12 +1,12 @@
 import React from 'react';
 
-//style
-import './style/Testimonials.scss';
-
-//Assets | logo
+// Assets | Icons | logo :
 import DMS from '../assets/Brands-logo/logo-dms.svg'
 import Atech from '../assets/Brands-logo/logo-atech.svg'
 import WebAds from '../assets/Brands-logo/logo-weba.svg'
+
+// css:
+import './style/Testimonials.scss';
 
 const testimonials = [
     {

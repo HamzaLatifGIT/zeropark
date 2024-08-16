@@ -3,10 +3,6 @@ $padding: 20px;
 $transition-duration: 0.3s;
 $font-family: Arial, sans-serif;
 
-
-
-
-
 .blog__container {
   display: flex;
   margin: 0 auto;
@@ -17,7 +13,6 @@ $font-family: Arial, sans-serif;
   margin-bottom: 15rem;
 
 }
-
 
 .sidebar {
   padding: 15px 0px;
@@ -42,7 +37,6 @@ $font-family: Arial, sans-serif;
     }
   }
 }
-
 
 .content {
   flex-grow: 1;
@@ -101,8 +95,7 @@ $font-family: Arial, sans-serif;
 
 
   p {
-    font-size: 1.2em;
-    line-height: 1.5;
+    line-height: 1.75rem;
   }
 }
 
@@ -125,21 +118,12 @@ aside {
 
         li {
           border-radius: .375rem;
-
-
           padding-left: .75rem;
           padding-right: .75rem;
-
-
           padding-top: .5rem;
-
-
           padding-bottom: .5rem;
-
           font-size: .875rem;
           line-height: 1.25rem;
-
-
           --tw-bg-opacity: 1;
           background-color: rgb(233 233 235 / var(--tw-bg-opacity));
         }
@@ -202,11 +186,16 @@ aside {
           display: flex;
           align-items: flex-start;
           margin-bottom: 10px;
+          color: #9696a0;
+          font-size: 12px;
+          opacity: .7;
 
           input[type="checkbox"] {
             margin-right: 10px;
             width: 45px;
             opacity: .7;
+            position: relative;
+            top: -7px;
           }
 
           label {

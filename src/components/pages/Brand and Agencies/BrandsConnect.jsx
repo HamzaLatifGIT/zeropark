@@ -1,9 +1,9 @@
 import React from 'react'
 
-//style
+// css :
 import './style/Brandsconnect.scss'
 
-//Assets | Icons 
+// Assets | Icons | Logo :
 import icon1 from '../../../assets/icons/ico-capture.svg'
 import icon2 from '../../../assets/icons/ico-omnichannel.svg'
 import icon3 from '../../../assets/icons/ico-cookies.svg'
@@ -19,7 +19,6 @@ function BrandsConnect() {
                         <div className="icon" data-aos='fade-up' data-aos-delay='300'><img src={icon1} alt="" data-aos='fade-in' data-aos-delay='600' /><span>Capturing customers at key touchpoints</span></div>
                         <div className="icon" data-aos='fade-up' data-aos-delay='400'><img src={icon2} alt="" data-aos='fade-in' data-aos-delay='700' /><span>Seamless experience</span></div>
                         <div className="icon" data-aos='fade-up' data-aos-delay='500'><img src={icon3} alt="" data-aos='fade-in' data-aos-delay='800' /> <span>No cookies involved</span></div>
-
                     </div>
                 </div>
             </div>

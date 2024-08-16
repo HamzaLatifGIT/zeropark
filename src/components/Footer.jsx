@@ -1,15 +1,14 @@
 import React from 'react';
 
-//Style
-import './style/Footer.scss';
-
-//Assets | Icons
+// Assets | Icons | Logo :
 import logo from '../assets/zeropark-logo-white-cm.svg'
 import logo2 from '../assets/logo-connected-by-team-internet-white.svg'
 import linkedin from '../assets/Social-logo/linkedin-white.svg'
 import facebook from '../assets/Social-logo/facebook-white.svg'
 import instagram from '../assets/Social-logo/instagram-white.svg'
 
+// css :
+import './style/Footer.scss';
 
 const Footer = () => {
     return (

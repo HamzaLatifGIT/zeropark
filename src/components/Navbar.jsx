@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
-import { IoMdPerson } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 
-// Assets | Icons | Logo
+// Assets | Icons | Logo :
+import { IoMdPerson } from "react-icons/io";
 import logo from "../assets/zeropark-logo-color-cm.svg";
+import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
 
-//style
+// css :
 import "./style/Navbar.scss";
 
 const Navbar = () => {

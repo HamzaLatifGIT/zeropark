@@ -1,9 +1,9 @@
 import React from 'react'
 
-//style
+// css :
 import './style/BrandAdvertising.scss'
 
-//Assets | Icons | Logo
+// Assets | Icons | Logo :
 import icon1 from '../../../assets/icons/icon-deliver.svg'
 import icon2 from '../../../assets/icons/icon-drive2.svg'
 import icon3 from '../../../assets/icons/icon-unlock.svg'

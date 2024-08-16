@@ -8,11 +8,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./components/pages/About";
 import Brandandagencies from "./components/pages/Brand and Agencies/Brandandagencies";
-import BlogDetails from "./components/pages/blog/BlogDetails";
 
 // Reveal Animations
 import Aos from "aos";
 import 'aos/dist/aos.css'
+
 
 
 function App() {

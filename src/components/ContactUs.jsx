@@ -1,6 +1,6 @@
 import React from 'react'
 
-//Style
+// css :
 import './style/ContactUs.scss'
 
 function ContactUs() {

@@ -1,7 +1,7 @@
 // Home.jsx
 import React from 'react'
 
-//Components
+// Components :
 import Navbar from '../Navbar'
 import Brands from '../Brands'
 import HeroSection from '../HeroSection'
@@ -21,8 +21,8 @@ import videoBg from '../../assets/file.mp4';
 function Home() {
   return (
     <>
-      
-      <HeroSection  url={videoBg} title={<h1>Drive incremental <br/>  performance <br/> to your brand</h1> } text={"🚀 Cookieless advertising solutions"}/>
+
+      <HeroSection url={videoBg} title={<h1>Drive incremental <br />  performance <br /> to your brand</h1>} text={"🚀 Cookieless advertising solutions"} />
       <Brands />
       <SocialBrand />
       <CommerceMedia />
@@ -30,10 +30,10 @@ function Home() {
       <BrandsShowcase />
       <AffiliateNetworks />
       <Testimonials />
-      <CustomSlider/>
+      <CustomSlider />
       <SliderComponent />
       <ContactUs />
-    
+
 
     </>
   )
