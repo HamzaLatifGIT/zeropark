@@ -116,7 +116,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#f7f7f7',
     borderRadius: '10px',
     height: '650px'

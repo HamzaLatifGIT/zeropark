@@ -43,7 +43,7 @@ const AffiliateNetworks = () => {
                     <div className="network" data-aos='fade-up' data-aos-delay='300'><img src={Impact} alt="" /></div>
                     <div className="network" data-aos='fade-up' data-aos-delay='400'><img src={Rakuten} alt="" /></div>
                     <div className="network" data-aos='fade-up' data-aos-delay='500'><img src={Avantlink} alt="" /></div>
-                    <div className="network" data-aos='fade-up' data-aos-delay='600'><img style={{ filter: 'invert(100%)' }} src={Andmore} alt="" /></div>
+                    <div className="network" data-aos='fade-up' data-aos-delay='600'><img style={{ filter: 'grayscale(1) invert(1)' }} src={Andmore} alt="" /></div>
                 </div>
             </div>
         </div>

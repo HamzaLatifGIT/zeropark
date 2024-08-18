@@ -283,6 +283,7 @@
 @media screen and (min-width:1024px) {
   .container {
 
+
     .grid {
       grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
 
@@ -298,6 +299,10 @@
 
 @media screen and (max-width:1024px) {
   .container {
+    .main-content {
+      grid-column: span 10 / span 9 !important;
+    }
+
     .blog-header {
       display: none;
 
