@@ -260,17 +260,6 @@
   }
   .slick-dots li button:before {
     display: none !important;
-    // font-size: px;
-    // line-height: 20px;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 20px;
-    // height: 20px;
-    // content: "•";
-    // text-align: center;
-    // opacity: 0.25;
-    // color: white;
   }
 
   .basedGlobally {
@@ -284,13 +273,54 @@
       font-weight: 600;
       text-align: center;
     }
+
     .map {
-      img {
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-      }
+      position: relative;
+      display: inline-block;
+    }
+
+    .mapImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .marker {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .marker img {
+      width: 100%;
+      height: 100%;
+      z-index: 6666666;
+    }
+
+    .berlin {
+      top: 34%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .newYork {
+      top: 40%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+    }
+    .losAngeles {
+      top: 42%;
+      left: 13.5%;
+      transform: translate(-50%, -50%);
+    }
+    .london {
+      top: 30%;
+      left: 46.2%;
+      transform: translate(-50%, -50%);
+    }
+    .zeropark {
+      top: 31%;
+      left: 54%;
+      transform: translate(-50%, -50%);
     }
   }
 

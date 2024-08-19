@@ -1,11 +1,14 @@
 import React from "react";
 import "./Button.scss";
 
-const Button = ({ children, ...rest }) => {
+const Button = ({ children, variant, ...rest }) => {
+  const buttonClass =
+    variant === "outlined" ? "StyledButton outlined" : "StyledButton";
+
   return (
     <button
       // disabled={variant === "disabled"}
-      className={`StyledButton`}
+      className={buttonClass}
       {...rest}>
       {children}
     </button>

@@ -6,20 +6,24 @@ import Button from "../../Button";
 
 // Assets | Icons | Logo :
 import card1Right from "../../../assets/card1Right.svg";
+import card2Image from "../../../assets/card2Image.svg";
+import recognizeImage from "../../../assets/recognizeImage.svg";
+import nextIcon from "../../../assets/nextIcon.svg";
+import personImage from "../../../assets/personImage.webp";
+import map from "../../../assets/map.svg";
+import recognize1 from "../../../assets/recognize1.svg";
+import recognize2 from "../../../assets/recognize2.svg";
+import recognize3 from "../../../assets/recognize3.svg";
+import location from "../../../assets/location.png";
 
 // css :
 import "./About.scss";
+import Tooltip from "../../Tooltip";
 
 const NextArrow = ({ onClick }) => {
   return (
     <div className="next-arrow" onClick={onClick}>
-      {/* ➡️ */}
-      <img
-        src={
-          "https://zeropark.com/wp-content/themes/zeropark/dist/912d2d68380c6beca74f.svg"
-        }
-        alt=""
-      />
+      <img src={nextIcon} alt="" />
     </div>
   );
 };
@@ -27,12 +31,7 @@ const NextArrow = ({ onClick }) => {
 const PrevArrow = ({ onClick }) => {
   return (
     <div className="prev-arrow" onClick={onClick}>
-      <img
-        src={
-          "https://zeropark.com/wp-content/themes/zeropark/dist/912d2d68380c6beca74f.svg"
-        }
-        alt=""
-      />
+      <img src={nextIcon} alt="" />
     </div>
   );
 };
@@ -118,7 +117,7 @@ const About = () => {
                   we’re responsible for driving efficient growth to marketers
                   and media owners in the commerce media space.
                 </div>
-                <Button>Learn More</Button>
+                <Button variant={"outlined"}>Learn More</Button>
               </div>
               <div className="imageParent">
                 <img src={card1Right} alt="" />
@@ -126,12 +125,7 @@ const About = () => {
             </div>
             <div className="upperCards">
               <div className="imageParent">
-                <img
-                  src={
-                    "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/teaminternet-logo.svg"
-                  }
-                  alt=""
-                />
+                <img src={card2Image} alt="" />
               </div>
               <div className="left">
                 <div className="heading">Connected by…</div>
@@ -141,7 +135,7 @@ const About = () => {
                   domain industry and rapidly growing in the ad tech space on a
                   global scale.
                 </div>
-                <Button>Learn More</Button>
+                <Button variant={"outlined"}>Learn More</Button>
               </div>
             </div>
           </div>
@@ -160,12 +154,7 @@ const About = () => {
               {/* <Button>Learn More</Button> */}
             </div>
             <div className="rightImage">
-              <img
-                src={
-                  "	https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/communities-logos2.svg"
-                }
-                alt=""
-              />
+              <img src={recognizeImage} alt="" />
             </div>
           </div>
         </div>
@@ -196,12 +185,7 @@ const About = () => {
             {[0, 1, 2, 3, 44, 5, 6, 6]?.map((data, i) => {
               return (
                 <div key={i} className="card">
-                  <img
-                    src={
-                      "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images-optimized//petr-big@2x.webp"
-                    }
-                    alt=""
-                  />
+                  <img src={personImage} alt="" />
                   <div className="bottomContent">
                     <div className="name">Joe Root</div>
                     <div className="info">Software Enginner</div>
@@ -215,26 +199,42 @@ const About = () => {
         <div className="basedGlobally aboutContainer">
           <div className="heading">Based globally</div>
           <div className="map">
-            <img
-              src={
-                "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/map.svg"
-              }
-              alt=""
-            />
+            <img src={map} className="mapImage" alt="Map" />
+            <div className="marker berlin">
+              <Tooltip city="Berlin" country={"Germany"}>
+                <img src={location} alt="Berlin Marker" />
+              </Tooltip>
+            </div>
+            <div className="marker losAngeles">
+              <Tooltip city="Los Angeles" country={"United States"}>
+                <img src={location} alt="Berlin Marker" />
+              </Tooltip>
+            </div>
+            <div className="marker newYork">
+              <Tooltip city="New York" country={"United States"}>
+                <img src={location} alt="newYork Marker" />
+              </Tooltip>
+            </div>
+            <div className="marker london">
+              <Tooltip city="Team Internet Group PLC" country={"London, UK"}>
+                <img src={location} alt="newYork Marker" />
+              </Tooltip>
+            </div>
+            <div className="marker zeropark">
+              <Tooltip city="Zeropark" country={"Krakow, PL"}>
+                <img src={location} alt="newYork Marker" />
+              </Tooltip>
+            </div>
           </div>
         </div>
         <div className="recognizeBy aboutContainer">
           <div className="heading">Recognized by</div>
           <div className="images">
-            {[
-              "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/ft2023-logo.svg",
-              "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/ft2022-logo.svg",
-              "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/ft2019-logo.svg",
-              "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/ft2018-logo.svg",
-              "https://zeropark.com/wp-content/themes/zeropark/landing-pages/about-us/images/ft2017-logo.svg",
-            ].map((data, i) => {
-              return <img key={i} src={data} alt="" />;
-            })}
+            {[recognize1, recognize2, recognize3, recognize1, recognize2].map(
+              (data, i) => {
+                return <img key={i} src={data} alt="" />;
+              }
+            )}
           </div>
         </div>
       </div>
