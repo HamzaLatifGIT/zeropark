@@ -35,5 +35,8 @@
   &:hover .tooltip {
     visibility: visible;
     opacity: 1;
+    @media screen and (max-width: 500px) {
+      visibility: hidden;
+    }
   }
 }

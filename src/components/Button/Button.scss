@@ -26,6 +26,7 @@
     color: black;
     &:hover {
       color: white;
+      background-color: black; /* Slightly darker shade for hover */
     }
   }
 }
