@@ -13,6 +13,7 @@ import macys from '../assets/Brands-logo/logo-macys.svg'
 import './style/Brands.scss'
 
 function Brands() {
+    
     return (
         <div className="brand" data-aos="fade-in" data-aos-delay='200'>
             <div className='brand__container max-width'>

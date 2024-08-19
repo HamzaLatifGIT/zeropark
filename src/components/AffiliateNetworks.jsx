@@ -13,6 +13,7 @@ import './style/AffiliateNetworks.scss';
 
 
 const AffiliateNetworks = () => {
+    
     return (
         <div className="affiliate-networks">
             <div className="affiliate-networks-container max-width">

@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 
 // Components
 import Home from "./components/pages/Home";
@@ -11,22 +10,23 @@ import Brandandagencies from "./components/pages/Brand and Agencies/Brandandagen
 
 // Reveal Animations
 import Aos from "aos";
-import 'aos/dist/aos.css'
-
-
+import 'aos/dist/aos.css';
 
 function App() {
-  useEffect(() => {
-    Aos.init({
-      once: true,
-      delay: 100,
-    });
+  // const location = useLocation();
 
+  // useEffect(() => {
+  //   Aos.init({
+  //     once: true,
+     
+  //   });
+  // }, []);
 
-    setTimeout(() => {
-      Aos.refresh();
-    }, 500);
-  }, []);
+  // useEffect(() => {
+  //   // Refresh AOS animations whenever the route changes
+  //   Aos.refresh();
+  // }, [location]);
+
 
   return (
     <>

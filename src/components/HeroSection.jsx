@@ -6,6 +6,7 @@ import './style/HeroSection.scss';
 
 
 const HeroSection = ({ title, text, url, logos }) => {
+    
     return (
         <section className="hero-section ">
             <video className="background-video" autoPlay muted>
