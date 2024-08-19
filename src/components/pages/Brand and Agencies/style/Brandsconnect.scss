@@ -46,7 +46,7 @@
                     color: white;
                     font-size: 1.25rem;
                     line-height: 1.75rem;
-                    font-weight: 700;
+
                 }
             }
 
@@ -77,12 +77,23 @@
 
 //Media Queries
 @media screen and (max-width:724px) {
+    .brandconnect__container {
+        .heading {
+            width: 100%;
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
 
     .brandconnect__box {
         justify-content: center !important;
         flex-wrap: wrap;
         text-align: center;
         gap: 3rem !important;
+        padding: 5rem 2rem !important;
 
         .text {
             width: 100% !important;

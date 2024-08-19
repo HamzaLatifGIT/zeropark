@@ -61,6 +61,7 @@ function SamplePrevArrow(props) {
 
 
 const SliderComponent = () => {
+    
     const settings = {
         dots: false,
         infinite: true,

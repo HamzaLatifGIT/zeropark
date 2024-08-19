@@ -1,5 +1,6 @@
 // Home.jsx
 import React from 'react'
+import { useEffect } from 'react'
 
 // Components :
 import Navbar from '../Navbar'
@@ -16,13 +17,23 @@ import SliderComponent from '../BussinessBenifits'
 import SocialBrand from '../SocialBrand'
 import CustomSlider from '../CustomSlider'
 import videoBg from '../../assets/file.mp4';
+import logo from '../../assets/g2-badge.webp'
+import ScrollTop from '../../../Hooks/ScrollTop'
+
+// Reveal Animations
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 
 function Home() {
+  ScrollTop();
+
+
+
   return (
     <>
 
-      <HeroSection url={videoBg} title={<h1>Drive incremental <br />  performance <br /> to your brand</h1>} text={"🚀 Cookieless advertising solutions"} />
+      <HeroSection url={videoBg} title={<h1>Drive incremental <br />  performance <br /> to your brand</h1>} text={"🚀 Cookieless advertising solutions"} logos={logo} />
       <Brands />
       <SocialBrand />
       <CommerceMedia />

@@ -4,6 +4,7 @@ import React from 'react'
 import './style/ContactUs.scss'
 
 function ContactUs() {
+    
     return (
         <div className='contact'>
             <div className='contact__container max-width'>

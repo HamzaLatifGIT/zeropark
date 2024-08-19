@@ -18,6 +18,11 @@
       font-size: 1.25rem;
       line-height: 1.75rem;
 
+      @media screen and (max-width:'700px') {
+        padding: 5rem 2rem;
+
+      }
+
       .avatar {
         display: flex;
         flex-direction: column;

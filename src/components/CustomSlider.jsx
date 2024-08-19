@@ -25,6 +25,7 @@ import './style/CustomSlider.scss';
 
 
 const CustomSlider = () => {
+  
   return (
     <div className="swiper-container">
       <div className="container  max-width">

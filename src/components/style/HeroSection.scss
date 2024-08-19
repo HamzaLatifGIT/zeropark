@@ -32,6 +32,7 @@ $hover-text: #00000080;
     &__content {
         position: relative;
         z-index: -1;
+        padding-top: 10rem;
         width: 100%;
 
         p {
@@ -59,6 +60,7 @@ $hover-text: #00000080;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin-bottom: 2rem;
 
             &:hover {
                 background-color: $secondary-color;

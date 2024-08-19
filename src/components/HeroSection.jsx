@@ -5,7 +5,8 @@ import './style/HeroSection.scss';
 
 
 
-const HeroSection = ({ title, text, url }) => {
+const HeroSection = ({ title, text, url, logos }) => {
+    
     return (
         <section className="hero-section ">
             <video className="background-video" autoPlay muted>
@@ -16,6 +17,9 @@ const HeroSection = ({ title, text, url }) => {
                     <div><p>{text}</p></div>
                     <div>{title}</div>
                     <div><button className="sign-up-btn">Sign up</button></div>
+                    <div className="badge">
+                     <img src={logos} alt="" />
+                    </div>
                 </div>
             </div>
 

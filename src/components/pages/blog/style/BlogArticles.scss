@@ -267,6 +267,11 @@
 
 @media screen and (min-width: 1024px) {
   .container {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e47105e274800161870d4655bc210977428b6be4
     .grid {
       grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
 
@@ -281,6 +286,10 @@
 
 @media screen and (max-width: 1024px) {
   .container {
+    .main-content {
+      grid-column: span 10 / span 9 !important;
+    }
+
     .blog-header {
       display: none;
     }

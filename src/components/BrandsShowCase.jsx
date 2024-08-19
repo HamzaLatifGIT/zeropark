@@ -24,6 +24,7 @@ import andmorelogo from '../assets/Brands-logo/logo-andmore.svg';
 import './style/BrandsShowCase.scss';
 
 const BrandsShowcase = () => {
+  
   const demandPartners = [
     { name: 'Vivint', logo: VivintLogo },
     { name: 'Bass Pro Shops', logo: BassProShopsLogo },

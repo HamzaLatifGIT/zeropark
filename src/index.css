@@ -8,13 +8,16 @@
   margin: 0%;
   scroll-behavior: smooth;
   animation: fade-in 0.15s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  box-sizing: border-box;
+  margin: 0;
+  
+ 
 }
 
 body {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-style: normal;
-  box-sizing: border-box;
+
 }
 
 /* max-width */

@@ -1,5 +1,4 @@
 .brands-showcase {
-  text-align: center;
   padding: 20px;
 
   .brand-container {
@@ -33,23 +32,25 @@
 
     .partners-section {
       margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
 
 
 
       h3 {
-        text-align: left;
+        grid-column: span 4 / span 4;
         font-size: 1.5em;
         margin-bottom: 10px;
       }
 
       .partners {
-        display: flex;
-        flex-wrap: wrap;
+        grid-column: span 8 / span 8;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        display: grid;
+        gap: 1.5rem;
+
 
         .partner {
-          margin: 10px;
           padding: 20px 40px;
           align-items: center;
           display: flex;
@@ -59,8 +60,8 @@
           transition: transform 0.3s;
 
           img {
-            max-width: 100px;
-            max-height: 50px;
+            width: 100%;
+
           }
 
           &:hover {
@@ -75,39 +76,27 @@
 
 // Media Queuries
 
-@media screen and (min-width:824px) {
-  .partners-section {
-    flex-wrap: wrap;
-
-    .partners {
-      justify-content: flex-end;
-      width: 65%;
-    }
-
-    h3 {
-      width: 35%;
-    }
-
+@media screen and (max-width:1024px) {
+  .partners {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
 
 }
 
-@media screen and (max-width:824px) {
+@media screen and (max-width:766px) {
   .partners-section {
-    flex-wrap: wrap;
-    flex-direction: column;
+    grid-template-columns: unset !important;
+  }
 
-    .partners {
-      justify-content: center;
-      width: 100%;
-    }
+  .partners {
 
-    h3 {
-      width: 100%;
-    }
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
   }
 
+  h3 {
+    width: 100%;
+  }
 
 }
